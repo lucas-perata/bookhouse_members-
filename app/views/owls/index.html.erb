@@ -1,14 +1,4 @@
 
-
-<h1>Owls</h1>
-
-<div id="owls">
-  <% @owls.each do |owl| %>
-    <%= render owl %>
-    <p>
-      <%= link_to "Show this owl", owl %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New owl", new_owl_path %>
+<%= render 'news' %>
+<%= render 'feed' %>
+<%= render 'popular' %>

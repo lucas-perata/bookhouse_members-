@@ -43,15 +43,18 @@
 
             <% if member_signed_in? %>
 
-            <div class="control">
-              <%= link_to "Owl", new_owl_path %>
-            </div>
-           
 
-            <div class="control">
-              <%= link_to current_member, edit_member_registration_path, class:"button is-info" %>
+            <div class="navbar-item">
+              <div class="control">
+                <%= link_to "Owl", new_owl_path %>
+              </div>
             </div>
-            
+
+            <div class="navbar-item">
+              <div class="control">
+                <%= link_to current_member.name, edit_member_registration_path, class:"button is-info" %>
+              </div>
+            </div>
             
              
               
@@ -60,15 +63,20 @@
               
 
               
-              
-              <%= button_to "Sign out", destroy_member_session_path, method: :delete %>
+              <div class="navbar-item">
+                <div class="control">
+                  <%= button_to "Sign out", destroy_member_session_path, method: :delete, class:"button is-info is-danger"%> 
+                </div>
+              </div>
              
                 
              
             <% else %>
 
-            <div class="button is-info">
-              <%= link_to "Sign in", new_member_session_path %>
+            <div class="navbar-item">
+              <div class="control">
+              <%= link_to "Sign in", new_member_session_path, class:"button is-success" %>
+            </div>
             </div>
 
                
