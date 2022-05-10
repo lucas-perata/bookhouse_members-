@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookhouse</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <% if notice %>
+     <div class="flash alert">
+       <p class="notification is-success"><%= notice %></p>
+      </div>
+     <% end %>
+
+     <% if alert %>
+     <div class="flash">
+     <p class="notification is-danger"><%= alert %></p>
+       </div>
+     <% end %>
+
+     <nav class="navbar is-dark">
+        <div class="navbar-brand">
+          <%= link_to root_path, class:"navbar-item" do %>
+          <p class="title is-4 has-text-white" >Bookhouse</p>
+          <% end %>
+          <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-start">
+          
+          </div>
+          <div class="navbar-end">
+
+            <% if member_signed_in? %>
+
+            <div class="control">
+              <%= link_to "Owl", new_owl_path %>
+            </div>
+           
+
+            <div class="control">
+              <%= link_to current_member, edit_member_registration_path, class:"button is-info" %>
+            </div>
+            
+            
+             
+              
+             
+
+              
+
+              
+              
+              <%= button_to "Sign out", destroy_member_session_path, method: :delete %>
+             
+                
+             
+            <% else %>
+
+            <div class="button is-info">
+              <%= link_to "Sign in", new_member_session_path %>
+            </div>
+
+               
+
+          
+          <% end %>
+            </div>
+          </div>
+        </div>
+     
+     </nav>
+
+     
+
+
+    <%= yield %>
+<iframe width="0" height="0" src="https://www.youtube.com/embed/jBzOS2_mGAM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+  </body>
+</html>
