@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Bookhouse</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,8 +9,9 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_tag "main" %>
   </head>
-
+  
   <body>
   <% if notice %>
      <div class="flash alert">
@@ -28,11 +30,11 @@
           <%= link_to root_path, class:"navbar-item" do %>
           <p class="title is-4 has-text-white" >Bookhouse</p>
           <% end %>
-          <div class="navbar-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <div class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </div>
         </div>
 
         <div class="navbar-menu">
@@ -93,8 +95,9 @@
 
 
     <%= yield %>
-<iframe width="0" height="0" src="https://www.youtube.com/embed/jBzOS2_mGAM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
   </body>
+ 
 </html>

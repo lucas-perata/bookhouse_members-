@@ -1,0 +1,27 @@
+<div class="column is-one-quarter">
+    
+    <div class="panel is-danger">
+        <div class="panel-heading">
+           <div class=" is-center">What the log is saying...</div> 
+        </div>
+
+            <% if @owls.count > 0 %>
+            <% @owls.each do |owl| %>
+        <div class="panel-block">
+    
+             <%= link_to owl.owl, owl %>
+
+        </div>
+        <% end  %>
+
+        <% else %>
+
+        <div class="panel-block">   
+        <div class="notification is-light is-warning">
+            The log does not have anything to say today.
+        </div>
+        </div>
+        <% end %>
+    </div>
+    
+</div>

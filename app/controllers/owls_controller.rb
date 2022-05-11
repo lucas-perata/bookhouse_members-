@@ -27,7 +27,7 @@ class OwlsController < ApplicationController
 
     respond_to do |format|
       if @owl.save
-        format.html { redirect_to owl_url(@owl), notice: "Owl was successfully created." }
+        format.html { redirect_to root_path, notice: "Owl was successfully created." }
         format.json { render :show, status: :created, location: @owl }
       else
         format.html { render :new, status: :unprocessable_entity }
