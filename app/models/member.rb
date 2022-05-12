@@ -4,5 +4,7 @@ class Member < ApplicationRecord
   has_many :owls 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable
-
+  
+  
+  
 end

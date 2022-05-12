@@ -13,10 +13,13 @@
 
   <div>
  
-    <%= form.text_area :owl, autofocus: true, placeholder:"What did you see?", class:"text-area medium textarea" %>
+    <%= form.text_area :owl, autofocus: true, placeholder:"What did you see?", class:"textarea is-medium " %>
   </div>
 
+  <div class="column new">
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"button is-dark" %>
   </div>
+  </div>
+  
 <% end %>
