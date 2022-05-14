@@ -31,3 +31,18 @@
 
       text-align: end;      
  }
+
+ .is-active .button {
+    display: flex;
+    flex: 1;
+
+
+}
+
+.button{
+   border-radius: 20px;
+}
+
+.button .burguer {
+color: rgb(0, 207, 3);
+}
