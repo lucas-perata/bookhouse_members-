@@ -40,8 +40,11 @@
                         <%= link_to edit_owl_path(owl), class: "item" do %>
                             <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i> </span>
                         <% end %>
+
+                        <%  if owl.member_id == current_member.id %>
                         <%= link_to owl, data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete it?" } do %>
-                            <span class="icon"> <i class="fa fa-trash-o" aria-hidden="true"> </i> </span>
+                            <span class="icon"> <i class="fa fa-trash" aria-hidden="true"></i> </span>
+                           <% end %>
                             <% end %>
                         <% end %>
                     </div> 
