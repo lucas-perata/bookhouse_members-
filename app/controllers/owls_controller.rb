@@ -4,7 +4,7 @@ class OwlsController < ApplicationController
 
   # GET /owls or /owls.json
   def index
-    @owls = Owl.all.order("created_at DESC")
+    @owls = Owl.all.limit(5).order("created_at DESC")
     @owl =Owl.new
   end
 
