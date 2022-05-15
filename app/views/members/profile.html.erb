@@ -1,5 +1,6 @@
 <div class="section">
         <div class="column">
+        <% if member_signed_in? %>
         <div class="title is-4"> <%= @members.name %></div>
                
     </div>
@@ -8,7 +9,8 @@
         <figure class="media-left">
             <p class="image is-64x64"></p>
         </figure>
-                         <% @owls.each do |owl| %>
+        
+        <% @owls.each do |owl| %>
 
         <div class="media-content">
             <div class="content">
@@ -22,4 +24,6 @@
 
 
     </div>
+    
+    <% end %>
 </div>
