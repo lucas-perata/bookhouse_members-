@@ -1,0 +1,25 @@
+<div class="section">
+        <div class="column">
+        <div class="title is-4"> <%= @members.name %></div>
+               
+    </div>
+
+    <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64"></p>
+        </figure>
+                         <% @owls.each do |owl| %>
+
+        <div class="media-content">
+            <div class="content">
+                <% if owl.member.id == current_member.id %>
+                <%= owl.owl %>
+                <% end %>
+                <% end %>  
+            </div>
+        </div>
+    </article>
+
+
+    </div>
+</div>
