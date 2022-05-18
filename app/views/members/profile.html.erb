@@ -1,29 +1,24 @@
-<div class="section">
-        <div class="column">
-        <% if member_signed_in? %>
-        <div class="title is-4"> <%= @members.name %></div>
-               
-    </div>
 
-    <article class="media">
-        <figure class="media-left">
-            <p class="image is-64x64"></p>
-        </figure>
+     <div class="section">
+    <div class="container">
+        <div class="columns">
+
         
-        <% @owls.each do |owl| %>
 
-        <div class="media-content">
-            <div class="content">
-                <% if owl.member.id == current_member.id %>
-                <%= owl.owl %>
-                <% end %>
-                <% end %>  
-            </div>
+            <%= render "member" %>
+            <%= render "owls" %>
+           
+
         </div>
-    </article>
-
-
     </div>
-    
-    <% end %>
 </div>
+
+   
+             
+                    
+               
+        
+
+       
+        
+       

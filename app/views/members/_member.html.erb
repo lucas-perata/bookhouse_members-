@@ -1,0 +1,8 @@
+<div class="column is-2">
+        <% if member_signed_in? %>
+        <div class="title is-8"> <%= @members.name %></div>
+            <%= link_to "Edit" %>
+        </div>
+    <% end %>
+
+    
