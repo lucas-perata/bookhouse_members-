@@ -36,6 +36,8 @@ class OwlsController < ApplicationController
     end
   end
 
+  
+
   # PATCH/PUT /owls/1 or /owls/1.json
   def update
     respond_to do |format|

@@ -1,0 +1,19 @@
+
+<div class="column is-one-quarter">
+    <nav class="panel">
+        <p class="panel-heading">Members to follow</p>
+        
+        <% @members = Member.all %>
+        <% @members.limit(5).each do |m| %>
+        <% if signed_in? %>
+        <div class="panel-block">
+            <%= link_to m.email%>
+        </div>
+        <% else %>
+        <div class="panel-block">
+            <p>...</p>
+        </div>
+        <% end %>
+    <% end %>
+    </nav>
+</div>
