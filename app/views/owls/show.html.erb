@@ -1,10 +1,22 @@
 
 
-<%= render @owl %>
+<div class="section">
+  <div class="container">
+  <div class="column is-centered">
+  <h1 class="title has-text-centered">Edit owl</h1>
 
+  <%= render @owl %>
 <div>
-  <%= link_to "Edit this owl", edit_owl_path(@owl) %> |
+  <% if  current_member.id == @owl.member.id %>
+  <%= link_to "Edit this owl", edit_owl_path(@owl) %>
   <%= link_to "Back to owls", owls_path %>
 
   <%= button_to "Destroy this owl", @owl, method: :delete %>
+  <% end %>
+
+</div>
+
+
+</div>
+</div>
 </div>
